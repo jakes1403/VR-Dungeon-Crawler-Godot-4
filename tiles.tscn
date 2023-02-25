@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://e8j8yisuoxm1"]
+
+[ext_resource type="PackedScene" uid="uid://llniwuw7tfyw" path="res://wall_segment.tscn" id="1_nc6xn"]
+[ext_resource type="PackedScene" uid="uid://daywlsg84pr8y" path="res://non_wall.tscn" id="2_7chys"]
+
+[node name="tiles" type="Node3D"]
+
+[node name="WallSegment" parent="." instance=ExtResource("1_nc6xn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="WallSegment2" parent="." instance=ExtResource("2_7chys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -4)

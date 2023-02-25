@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://daywlsg84pr8y"]
+
+[ext_resource type="PackedScene" uid="uid://ijwlwppmcwl" path="res://models/non-wall.blend" id="1_nli5j"]
+
+[node name="WallSegment" type="Node3D"]
+
+[node name="non-wall" parent="." instance=ExtResource("1_nli5j")]

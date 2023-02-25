@@ -1,0 +1,9 @@
+res://world.tscn
+res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
+res://mat.tres
+res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
+res://mat2.tres
+res://non_wall.tscn
+res://wall_segment.tscn
+res://mazeGen.tscn
+res://mazeGen.gd

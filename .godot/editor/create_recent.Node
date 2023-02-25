@@ -1,0 +1,16 @@
+GridMap
+OmniLight3D
+SpotLight3D
+StaticBody3D
+LightmapProbe
+CollisionPolygon3D
+CollisionShape3D
+LightmapGI
+DirectionalLight3D
+AudioStreamPlayer
+FogVolume
+WorldEnvironment
+MeshInstance3D
+XRController3D
+XRCamera3D
+XROrigin3D
