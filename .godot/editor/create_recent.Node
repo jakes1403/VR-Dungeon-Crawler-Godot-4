@@ -1,10 +1,12 @@
+Node3D
+XRToolsSceneBase
+CollisionShape3D
 GridMap
 OmniLight3D
 SpotLight3D
 StaticBody3D
 LightmapProbe
 CollisionPolygon3D
-CollisionShape3D
 LightmapGI
 DirectionalLight3D
 AudioStreamPlayer

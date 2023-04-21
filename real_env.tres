@@ -1,0 +1,25 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://cniuje8safrhy"]
+
+[ext_resource type="Texture2D" uid="uid://dqoe1c5yn5dnv" path="res://assets/ambientcg.com/SkyOnlyHDRI023_2K-TONEMAPPED.jpg" id="1_yhu5d"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ceikm"]
+panorama = ExtResource("1_yhu5d")
+
+[sub_resource type="Sky" id="Sky_mixrv"]
+sky_material = SubResource("PanoramaSkyMaterial_ceikm")
+
+[resource]
+background_mode = 1
+sky = SubResource("Sky_mixrv")
+tonemap_mode = 1
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_min_cell_size = 2.87
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.78
+glow_blend_mode = 0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1944
+volumetric_fog_emission = Color(0.47451, 0.47451, 0.47451, 1)
+volumetric_fog_temporal_reprojection_enabled = false

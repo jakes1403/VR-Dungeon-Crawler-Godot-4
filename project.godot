@@ -13,7 +13,8 @@ config_version=5
 config/name="VR Dungeon"
 run/main_scene="res://demo_staging.tscn"
 config/features=PackedStringArray("4.0")
-config/icon="res://icon.png"
+config/icon="res://maze_logo.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 

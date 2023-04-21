@@ -5,12 +5,12 @@ extends Node3D
 
 var i_seed = 0
 
-@export var width = 10
-@export var height = 10
+var width = 10
+var height = 10
+
 @export var level_seed = 0:
 	set (value):
-		i_seed = value
-		generate_maze(value)
+		generate_maze()
 	get:
 		return i_seed
 
@@ -26,8 +26,12 @@ var nonWall = preload("res://non_wall.tscn")
 var space = 2
 
 func printMaze(maze):
-	_delete_children(self)
+	var hasDoneFirst = false
+	var hasDoneLast = false
+	_delete_children($Maze)
 	var y = 0
+	var startOffset = 0
+	var endOffset = 0
 	for i in range(0, height):
 		y += 1
 		var x = 0
@@ -40,14 +44,27 @@ func printMaze(maze):
 				seg.transform.origin.x = x * space
 				seg.transform.origin.z = y * space
 				
-				add_child(seg)
+				$Maze.add_child(seg)
 			else:
 				var seg = nonWall.instantiate()
 				seg.transform.origin.x = x * space
 				seg.transform.origin.z = y * space
 				
-				add_child(seg)
+				$Maze.add_child(seg)
 			
+			if y == 1 and hasDoneFirst == false and current != "w":
+				hasDoneFirst = true
+				startOffset = x
+			
+			if y == height and hasDoneLast == false and current != "w":
+				hasDoneLast = true
+				endOffset = x
+	print(endOffset)
+	#-4 + 
+	transform.origin.x = (startOffset * -2)
+	
+	$Room.transform.origin.z = (height * 2.0) + 4
+	$Room.transform.origin.x = (endOffset * 2.0)
 
 func surroundingCells(rand_wall):
 	var s_cells = 0
@@ -68,7 +85,9 @@ static func _delete_children(node):
 		n.queue_free()
 
 func generate_maze(seed = 0):
-	seed(seed)
+	width = randi_range(0, 20)
+	height = randi_range(0, 20)
+	
 	maze.clear()
 	
 	for i in range(0, height):
@@ -276,5 +295,7 @@ func generate_maze(seed = 0):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	generate_maze()
 	pass
 
